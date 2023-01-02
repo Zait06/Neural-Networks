@@ -36,9 +36,9 @@ classdef McCullochPitts
     function success = not(self)
       self.ttable = [1 0; 0 1];   % Create table
       times = self.ttable(1, :) * self.weights; % Times x * w
-      output = self.ttable(:, end); % Copy exit table
+      target = self.ttable(:, end); % Copy exit table
       arr = times > self.theta; # Function `S`
-      if sum(flip(arr == output')) == 2
+      if sum(flip(arr == target')) == 2
         success = logical(1);
       else
         success = logical(0);
@@ -47,9 +47,9 @@ classdef McCullochPitts
 
     function success = and(self, size_)
       self = create_table(self, size_); % Create table
-      output = zeros(1,(2 ^ size_));  % Set logical output
-      output(end) = 1;
-      s = fit(self, output);  % Compute result
+      target = zeros(1,(2 ^ size_));  % Set logical target
+      target(end) = 1;
+      s = fit(self, target);  % Compute result
       if sum(s) == size_
         success = logical(1);
       else
@@ -59,9 +59,9 @@ classdef McCullochPitts
 
     function success = or(self, size_)
       self = create_table(self, size_); % Create table  
-      output = ones(1,(2 ^ size_)); % Set logical output
-      output(1) = 0;
-      s = fit(self, output);  % Compute result
+      target = ones(1,(2 ^ size_)); % Set logical target
+      target(1) = 0;
+      s = fit(self, target);  % Compute result
       if sum(s) == size_
         success = logical(1);
       else
@@ -69,11 +69,11 @@ classdef McCullochPitts
       end
     endfunction
 
-    function s = fit(self, output)  % COmpute result
+    function s = fit(self, target)  % COmpute result
       xw = self.weights .* self.ttable;
       xw = sum(xw, 2);
       arr = xw > self.theta;
-      s = arr == output';
+      s = arr == target';
     endfunction
 
     function save(self) % Save information into file

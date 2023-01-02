@@ -27,7 +27,10 @@ endswitch
 while (true)
   clc
   if op ~= 1
-    size_ = input('Size number to outputs: ');
+    size_ = input('Size number to outputs (min 2): ');
+    if (size_ < 2)
+      size_ = 2;
+    endif
     for i = 1:size_
       fprintf('Input w_%d',i);
       w(i)=input(': ');
