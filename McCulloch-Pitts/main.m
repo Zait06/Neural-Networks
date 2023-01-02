@@ -58,12 +58,18 @@ while (true)
     pause
     break
   else
-    fprintf("Error, do you wanna try again?\n1.Yes\t2.No\n")
+    fprintf("Error, do you wanna try again?\n1.Yes\t2.No")
     answ = input('Option: ');
-    if ~logical(answ)
+    if answ == 2
       break
     endif
   endif
 endwhile
 
-mc.save(mc)
+disp("Do you wanna save weights and theta value?\n1.Yes\t2.No")
+answ = input('Option: ');
+if answ == 1
+  mc.save(mc)
+endif
+
+disp("Finish program")
