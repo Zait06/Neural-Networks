@@ -22,6 +22,7 @@ En un red recurrente se necesita de un bloque llamado "retraso en tiempo", el cu
 Una Red Neuronal Artificial hamming es una red "competitiva"; está diseñada explícitamente para resolver problemas de reconocimiento binario de patrones, entonces, podemos decir que esta red nos puede ayudar a clasificar a más de una clase. Esta red neuronal está constituida por dos capas, una capa es de una red tipo feedforward y la otra es de una red recurrente, como se muestra a continuación:
 
 ![Red Hamming](../extras/HammingNetwork.png "Red Hamming")
+
 **Capa feedforward**
 
 Esta capa calcula la correlación o producto interno entre cada uno de los vectores prototipo y el patrón de entrada. Con este objetivo, las filas de la matriz de pesos $W^1$, serán cada uno de los vectores prototipo. La ecuación que describe esta capa es:
