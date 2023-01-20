@@ -1,5 +1,9 @@
 # Celula McCulloch-Pitts
 
+- [Celula McCulloch-Pitts](#celula-mcculloch-pitts)
+  - [Marco teórico](#marco-teórico)
+  - [Referencias](#referencias)
+
 ## Marco teórico
 
 Esta célula puede considerarse como una red neuronal artificial, por el tipo de estructura que tiene. Este modelo de neurona fue propuesto por Warren McCulloch y Wlater Pitts en 1943. En él, modelizaban una estructura y un funcionamiento simplificado de las neuronas del cerebro, considerándose como dispositivos con sólo dos estados posibles, apagado y encendido ($0$ y $1$ respectivamente).

@@ -1,4 +1,11 @@
 # Red Hamming
+
+- [Red Hamming](#red-hamming)
+  - [Marco teórico](#marco-teórico)
+    - [RNA feedforward](#rna-feedforward)
+    - [RNA recurrente](#rna-recurrente)
+    - [RNA Hamming](#rna-hamming)
+  - [Referencias](#referencias)
 ## Marco teórico
 
 Antes de comenzar, tocaremos dos conceptos importantes: red feedforward y red recurrente.
